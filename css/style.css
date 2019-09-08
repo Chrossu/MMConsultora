@@ -29,8 +29,26 @@ a {
     overflow: hidden;
 }
 
+.container-60-l {
+    max-width: 60%;
+    margin-left: auto;
+}
+
+.container-60-r {
+    max-width: 60%;
+    margin-right: auto;
+}
+
 .text-center {
     text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .py-1 { padding: 1.5rem 0; }
@@ -40,6 +58,14 @@ a {
 .p-1 { padding: 1.5rem; }
 .p-2 { padding: 2.0rem; }
 .p-3 { padding: 3.0rem; }
+
+.my-1 { margin: 1.5rem 0; }
+.my-2 { margin: 2.0rem 0; }
+.my-3 { margin: 3.0rem 0; }
+
+.m-1 { margin: 1.5rem; }
+.m-2 { margin: 2.0rem; }
+.m-3 { margin: 3.0rem; }
 
 .color-primary {
     color: #93cb52;
@@ -55,8 +81,11 @@ a {
     color: #fff;
 }
 
+.bg-dark-lgt {
+    background: rgb(92, 92, 92);
+}
 .l-heading {
-    font-size: 4rem;
+    font-size: 3.3rem;
     margin-bottom: 0.75rem;
 }
 
@@ -134,7 +163,7 @@ a {
 
 /* Start of Showcase */
 #showcase {
-    background: #444 url('../img/showcase.jpg') no-repeat center;
+    background: #444 url('../img/home/showcase.jpg') no-repeat center center/cover;
     height: 100vh;
     color: #fff;
 }
@@ -150,11 +179,6 @@ a {
     justify-content: center;
     align-items: center;
     height: 100%;
-    /* position: absolute;
-    top: 65px;
-    left: 0;
-    right: 0;
-    bottom: 0; */
     background-color: rgba(0,0,0,0.5);
 }
 
@@ -192,6 +216,60 @@ a {
 }
 
 #who .who-img {
-    background: #444 url(../img/people.jpg) no-repeat center center/cover;
-    
+    background: #444 url(../img/home/people.jpg) no-repeat center center/cover;
+}
+
+
+/* Start of "Nuestros clientes" */
+#clients .items {
+    display: flex;
+}
+
+#clients .items img {
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+/* ------------------------------------------------------------------------ */
+/*                          Start of Services PAGE                          */
+/* ------------------------------------------------------------------------ */
+
+/* Start of Web Scraping */
+#web-scraping {
+    display: flex;
+}
+
+#web-scraping div {
+    flex: 1;
+}
+
+#web-scraping img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+#web-scraping .web-scraping-content {
+    max-width: 60%;
+}
+
+
+/* Start of Projects */
+#projects {
+    display: flex;
+}
+
+#projects div {
+    flex: 1;
+}
+
+#projects img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+#projects .web-scraping-content {
+    max-width: 60%;
 }
