@@ -51,21 +51,37 @@ a {
     text-align: right;
 }
 
-.py-1 { padding: 1.5rem 0; }
-.py-2 { padding: 2.0rem 0; }
-.py-3 { padding: 3.0rem 0; }
+.py-1 { padding: 1.5rem 0 !important; }
+.py-2 { padding: 2.0rem 0 !important; }
+.py-3 { padding: 3.0rem 0 !important; }
 
-.p-1 { padding: 1.5rem; }
-.p-2 { padding: 2.0rem; }
-.p-3 { padding: 3.0rem; }
+.px-1 { padding: 0 1.5rem !important; }
+.px-2 { padding: 0 2.0rem !important; }
+.px-3 { padding: 0 3.0rem !important; }
 
-.my-1 { margin: 1.5rem 0; }
-.my-2 { margin: 2.0rem 0; }
-.my-3 { margin: 3.0rem 0; }
+.pt-1 { padding-top: 1.5rem !important; }
+.pt-2 { padding-top: 2.0rem !important; }
+.pt-3 { padding-top: 3.0rem !important; }
 
-.m-1 { margin: 1.5rem; }
-.m-2 { margin: 2.0rem; }
-.m-3 { margin: 3.0rem; }
+.pb-1 { padding-bottom: 1.5rem !important; }
+.pb-2 { padding-bottom: 2.0rem !important; }
+.pb-3 { padding-bottom: 3.0rem !important; }
+
+.p-1 { padding: 1.5rem !important; }
+.p-2 { padding: 2.0rem !important; }
+.p-3 { padding: 3.0rem !important; }
+
+.my-1 { margin: 1.5rem 0 !important; }
+.my-2 { margin: 2.0rem 0 !important; }
+.my-3 { margin: 3.0rem 0 !important; }
+
+.mb-1 { margin-bottom: 1.5rem !important; }
+.mb-2 { margin-bottom: 2.0rem !important; }
+.mb-3 { margin-bottom: 3.0rem !important; }
+
+.m-1 { margin: 1.5rem !important; }
+.m-2 { margin: 2.0rem !important; }
+.m-3 { margin: 3.0rem !important; }
 
 .color-primary {
     color: #93cb52;
@@ -84,14 +100,15 @@ a {
 .bg-dark-lgt {
     background: rgb(92, 92, 92);
 }
+
 .l-heading {
     font-size: 3.3rem;
-    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
 }
 
 .m-heading {
     font-size: 2rem;
-    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
 }
 
 .lead {
@@ -128,6 +145,20 @@ a {
 }
 
 .list li:last-child {
+    border-bottom: none;
+}
+
+.list-g {
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+.list-g li {
+    padding: 0.5rem 0;
+    border-bottom: 1.3px solid linear-gradient(red, yellow, green);
+}
+
+.list-g li:last-child {
     border-bottom: none;
 }
 
@@ -179,7 +210,7 @@ a {
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.6);
 }
 
 #showcase .showcase-content a {
@@ -240,6 +271,11 @@ a {
     display: flex;
 }
 
+#web-scraping li {
+    list-style: circle;
+    list-style-position: inside
+}
+
 #web-scraping div {
     flex: 1;
 }
@@ -258,6 +294,11 @@ a {
 /* Start of Projects */
 #projects {
     display: flex;
+}
+
+#projects li {
+    list-style: disc;
+    list-style-position: inside
 }
 
 #projects div {
