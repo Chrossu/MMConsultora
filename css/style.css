@@ -8,6 +8,7 @@
 }
 
 body {
+    background: #efefef;
     font-family: 'Roboto', sans-serif;
     line-height: 1.4;
 }
@@ -78,6 +79,10 @@ a {
 .mb-1 { margin-bottom: 1.5rem !important; }
 .mb-2 { margin-bottom: 2.0rem !important; }
 .mb-3 { margin-bottom: 3.0rem !important; }
+
+.mt-1 { margin-top: 1.5rem !important; }
+.mt-2 { margin-top: 2.0rem !important; }
+.mt-3 { margin-top: 3.0rem !important; }
 
 .m-1 { margin: 1.5rem !important; }
 .m-2 { margin: 2.0rem !important; }
@@ -160,6 +165,21 @@ a {
 
 .list-g li:last-child {
     border-bottom: none;
+}
+
+.separator-top {
+    margin-top: 20px;
+    background: linear-gradient(to right, #fff, #444, #fff);
+    height: 1px;
+    width: 100%;
+}
+
+.separator-bot {
+    margin-bottom: 20px;
+    padding: 0 12rem;
+    background: linear-gradient(to right, #fff, #444, #fff);
+    height: 1px;
+    width: 100%;
 }
 
 
@@ -313,4 +333,26 @@ a {
 
 #projects .web-scraping-content {
     max-width: 60%;
+}
+
+/* ------------------------------------------------------------------------ */
+/*                          Start of Services PAGE                          */
+/* ------------------------------------------------------------------------ */
+
+/* Start of Building Section */
+#who-page {
+    display: flex;
+}
+
+#who-page div {
+    flex: 1;
+    min-height: 600px;
+}
+
+#who-page .team-img {
+    background: #444 url(../img/who/team.jpg) no-repeat center center/cover;
+}
+
+#who-page .building-img {
+    background: #444 url(../img/who/building.jpg) no-repeat center center/cover;
 }
