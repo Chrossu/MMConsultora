@@ -40,4 +40,26 @@
     #clients .logo-container img {
         width: 70%;
     }
+
+    /* Services page */
+    #web-scraping {
+        flex-direction: column-reverse;
+    }
+
+    #web-scraping .web-scraping-content {
+        padding: 0 !important;
+    }
+
+    #web-scraping .web-scraping-content .container-75-l {
+        justify-items: center 
+    }
+
+    #web-scraping .web-scraping-img {
+        text-align: center;
+    }
+
+    #web-scraping .web-scraping-img img {
+        width: 80%;
+        height: 80%;
+    }
 }
