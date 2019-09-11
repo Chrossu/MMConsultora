@@ -30,14 +30,23 @@ a {
     overflow: hidden;
 }
 
-.container-60-l {
-    max-width: 60%;
+.container-75-l {
+    max-width: 75%;
     margin-left: auto;
 }
 
-.container-60-r {
-    max-width: 60%;
+.container-75-r {
+    max-width: 75%;
     margin-right: auto;
+}
+
+.container-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-flex>div {
+    flex: 1;
 }
 
 .text-center {
@@ -85,6 +94,14 @@ a {
 .my-1 { margin: 1.5rem 0 !important; }
 .my-2 { margin: 2.0rem 0 !important; }
 .my-3 { margin: 3.0rem 0 !important; }
+
+.mr-1 { margin-right: 1.5rem !important; }
+.mr-2 { margin-right: 2.0rem !important; }
+.mr-3 { margin-right: 3.0rem !important; }
+
+.ml-1 { margin-left: 1.5rem !important; }
+.ml-2 { margin-left: 2.0rem !important; }
+.ml-3 { margin-left: 3.0rem !important; }
 
 .mb-1 { margin-bottom: 1.5rem !important; }
 .mb-2 { margin-bottom: 2.0rem !important; }
@@ -198,15 +215,6 @@ a {
     width: 100%;
 }
 
-.container-flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.container-flex>div {
-    flex: 1;
-}
-
 /* Start of Navbar */
 #navbar {
     display: flex;
@@ -235,6 +243,9 @@ a {
     border-radius: 5px;
 }
 
+/* ------------------------------------------------------------------------ */
+/*                          Start of Index PAGE                             */
+/* ------------------------------------------------------------------------ */
 
 /* Start of Showcase */
 #showcase {
@@ -364,7 +375,7 @@ a {
 }
 
 /* ------------------------------------------------------------------------ */
-/*                          Start of Who PAGE                          */
+/*                          Start of Who PAGE                               */
 /* ------------------------------------------------------------------------ */
 
 /* Start of Building Section */
@@ -378,9 +389,196 @@ a {
 }
 
 #who-page .team-img {
-    background: #444 url(../img/who/team.jpg) no-repeat center center/cover;
+    background: #444 url(../img/who/team.jpg) no-repeat center;
 }
 
 #who-page .building-img {
     background: #444 url(../img/who/building.jpg) no-repeat center center/cover;
+}
+
+
+
+
+
+/* ------------------------- */
+/* Form */
+/* ------------------------- */
+form,#form{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+form input,
+form textarea{
+    margin-bottom: 1em;
+}
+form .submit{
+    margin: 0 auto;
+}
+form .submit input{
+    padding: 1em 8em;
+}
+.input_auto_m{
+    display: flex;
+    justify-content: space-between;
+}
+.input_w_49{
+    width: 49%;
+}
+.input_text{
+    color: black;
+    background-color: #c5c5c5;
+    border: 0;
+    border-radius: 3px;
+    padding: 12px 6px;
+
+}
+::placeholder{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+/* ------------------------- */
+/* Remove input arrows
+/* ------------------------- */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* ------------------------- */
+/* POPUP */
+/* ------------------------- */
+
+.overlay {
+	background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup {
+	background: #F8F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	text-align: center;
+	width: 600px;
+	
+	transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+	color: #BBBBBB;
+}
+
+.popup .btn-cerrar-popup:hover {
+	color: #000;
+}
+
+.popup h3 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	opacity: 0;
+}
+
+.popup h4 {
+	font-size: 26px;
+	font-weight: 300;
+	margin-bottom: 40px;
+	opacity: 0;
+}
+
+.popup form .contenedor-inputs {
+	opacity: 0;
+}
+
+.popup form .contenedor-inputs input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	font-size: 18px;
+	line-height: 52px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+}
+
+.popup form .btn-submit {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: #5E7DE3;
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover {
+	background: rgba(94,125,227, .9);
+}
+
+/* ------------------------- */
+/* ANIMACIONES */
+/* ------------------------- */
+.popup.active {	transform: scale(1); opacity: 1; }
+.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaSubtitulo {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }

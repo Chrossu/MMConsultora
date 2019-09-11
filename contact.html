@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <title>MM Digital | Accounting & Investment</title>
 </head>
@@ -22,7 +23,107 @@
             <li><a href="contact.html">Contáctenos</a></li>
         </ul>
     </nav>
+    <!-- Showcase -->
+    <header id="showcase">
+        <div class="showcase-content">
+            <h1 class="l-heading fadeIn animated slower">Contacta con<span class="color-primary"> nosotros</span></h1>
+            <p class="lead animated fadeIn delay-1s slow">Nuestros equipo está dispuesto a resolver cualquier inquietud.
+            </p>
+            <!-- <p class="lead animated fadeIn delay-1s slow">Si tienes dudas con cualquiera de nuestro servicio, no dudes
+                en ponenerte en contacto con nosotros, Nuestros ejecutivos estan al pendiente de cualquier inquietud.
+            </p> -->
+        </div>
+    </header>
 
+    <!-- Section: Title -->
+    <section id="title" class="bg-light">
+        <div class="separator-top"></div>
+        <h1 class="text-center l-heading py-1 pt-3 pb-3">Acercate a nuestra<span class="color-primary"> sucursal</span>
+        </h1>
+        <div class="separator-bot"></div>
+    </section>
+
+    <!-- Section: map -->
+    <section id="projects" class="pb-3 p-1 bg-dark">
+        <div class="p-1">
+            <div class="container-75-l">
+                <h2 class="m-heading text-center">¿Tienes alguna consulta?</h2>
+                <p>Si necesitas comunicarte con nuestro equipo y/o necesitas solucionar algun inconveniente,
+                    acercate a nuestra sucursal y te ayudaremos. También puedes contactarnos mediante un formulario de
+                    contacto o nuestros medios digitales, los cuales se muestran a continuación:</p>
+                <h2 class="text-center mt-3"><span class="color-primary">Datos de la empresa</span></h2>
+                <ul class="list-g">
+                    <li><b>Fono: </b> 600 425 6000</li>
+                    <li><b>Correo: </b> info@mmdigital.cl</li>
+                    <li><b>Direccion: </b>Av. Vicuña Mackenna 4917</li>
+                </ul>
+            </div>
+        </div>
+        <div class="">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.0562696166626!2d-70.61865578426368!3d-33.499913107439625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00be4a5fa81%3A0xcd8eaf5b1d547f64!2sDuoc%20UC%3A%20Sede%20San%20Joaqu%C3%ADn!5e0!3m2!1ses!2scl!4v1567980992664!5m2!1ses!2scl"
+                width="800" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+    </section>
+
+
+    <!-- Section: Form -->
+    <section id="#form" class="bg-light">
+        <div class="separator-top my-1"></div>
+
+        <div class="container">
+            <div class="projects-content">
+                <div class="container">
+                    <h2 class="m-heading text-center mb-1">Formulario de <span class="color-primary">contacto</span></h2>
+                </div>
+            </div>
+            <form name="myForm" onsubmit="return validateForm()">
+
+                <label><b>Tipo Persona: </b></label>
+                <div class="container_rb">
+                    <input class="" type="radio" id="persona" name="fradio" value="Persona" required>
+                    <label for="persona" class="mr-1">Natural</label>
+
+                    <input class="" type="radio" id="empresa" name="fradio" value="Empresa" required>
+                    <label for="empresa">Empresa</label>
+                </div>
+
+
+
+                <div class="input_auto_m">
+                    <input type="text" onkeydown="limit(this)" class="input_w_49 input_text" name="fnombre"
+                        placeholder="Nombre" required>
+
+                    <input type="email" class="input_w_49 input_text" name="fcorreo" placeholder="Correo *" required>
+                </div>
+
+                <input class="input_text" onkeydown="limit_tel(this)" type="number" name="ftelefono"
+                    placeholder="Teléfono *" required>
+
+                <textarea class="input_text" name="fcomentario" cols="30" rows="10" placeholder="Comentario"></textarea required>
+        
+                <div class="submit"><input id="btn-abrir-popup" class="btn" type="submit" value="Enviar"></div>
+            </form>
+        </div>
+
+        <div class="overlay" id="overlay">
+                <div class="popup" id="popup">
+                    <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                    <h3>¡Mensaje enviado!</h3>
+                    <h4>Tus datos son los siguentes:</h4>
+                    <div class="contenedor_datos">
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+        </div>
+
+        <div class="separator-bot my-1"></div>
+    
+    </section>
     <!-- Footer -->
     <footer id="main-footer" class="bg-dark text-center py-1">
         <div class="container">
@@ -31,6 +132,8 @@
             <p>Copyright &copy; 2019 MM Digital, Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="js/contact.js"></script>
 </body>
 
 </html>
