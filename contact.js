@@ -18,6 +18,23 @@ btnCerrarPopup.addEventListener('click', function(e){
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // VALIDACIONES
 function limit(element)
 {
@@ -46,28 +63,24 @@ function validateForm()
     let comentario = document.myForm.fcomentario;
     
     
-    if(nombre.value.length < 2){
-        alert('El nombre ingresado es muy corto.')
+    if(nombre.value.length<2){
+        alert('Nombre muy corto')
         return false;
     }
-    else if(correo.value.length < 5){
-        console.log("Correo no valido.")
+    else if(correo.value.length<5){
+        console.log("Correo no valido")
         return false;
     }
     else if(!isNaN(telefono)){
-        alert('Este teléfono no es un número.')
-        return  false;
+        alert('Este teléfono no es un numero')
+        return  false
     }
-    else if (telefono.value.length < 10 ) {
-        alert('El teléfono ingresado es muy corto.')
+    else if(comentario.value.length <5){
+        console.log(" Comentario muy corto")
         return false;
     }
-    else if(comentario.value.length < 5){
-        alert("Comentario muy corto.")
-        return false;
-    }
-    else if(rb.value.length = 0){
-        alert("Seleccione un Tipo de persona.")
+    else if(rb.value.length=0){
+        console.log("Seleccione un Tipo de persona")
         return false;
     }
 
@@ -79,7 +92,7 @@ function validateForm()
     popUpPharp[1].innerHTML=`<b>Correo: </b>${correo.value}`
     popUpPharp[2].innerHTML=`<b>Tipo persona: </b>${rb.value}`
     popUpPharp[3].innerHTML=`<b>Teléfono: </b>${telefono.value}`
-    popUpPharp[4].innerHTML=`<b>Comentario: </b>${comentario.value}`
+    popUpPharp[4].innerHTML=`<b>comentario: </b>${comentario.value}`
 
     abrirVentana();
     return false;
