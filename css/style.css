@@ -209,7 +209,6 @@ a {
 
 .separator-bot {
     margin-bottom: 20px;
-    padding: 0 12rem;
     background: linear-gradient(to right, #fff, #444, #fff);
     height: 1px;
     width: 100%;
@@ -396,9 +395,9 @@ a {
     background: #444 url(../img/who/building.jpg) no-repeat center center/cover;
 }
 
-
-
-
+#who-content .lead {
+    margin-bottom: 0.75rem;
+}
 
 /* ------------------------- */
 /* Form */
