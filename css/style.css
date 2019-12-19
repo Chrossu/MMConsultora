@@ -226,6 +226,10 @@ a {
     z-index: 1;
 }
 
+#navbar .logo a {
+    color: #efefef;
+}
+
 #navbar ul {
     display: flex;
     list-style: none;
@@ -247,17 +251,20 @@ a {
 /* ------------------------------------------------------------------------ */
 
 /* Start of Showcase */
-#showcase {
+#showcase,
+#showcase-who {
     background: #444 url('../img/home/showcase.jpg') no-repeat center center/cover;
     height: 100vh;
     color: #fff;
 }
 
-#showcase p {
+#showcase p,
+#showcase-who p {
     padding: 0 2rem;
 }
 
-#showcase .showcase-content {
+#showcase .showcase-content,
+#showcase-who .showcase-content {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -267,7 +274,8 @@ a {
     background-color: rgba(0,0,0,0.6);
 }
 
-#showcase .showcase-content a {
+#showcase .showcase-content a,
+#showcase-who .showcase-content a {
     font-size: 1.2rem;
     font-weight: 1.2rem;
 }
@@ -350,6 +358,10 @@ a {
     list-style-position: inside
 }
 
+#projects .projects-img {
+    text-align: right;
+}
+
 #projects div {
     flex: 1;
 }
@@ -388,7 +400,7 @@ a {
 }
 
 #who-page .team-img {
-    background: #444 url(../img/who/team.jpg) no-repeat center;
+    background: #444 url(../img/who/team.jpg) no-repeat center/cover;
 }
 
 #who-page .building-img {
@@ -402,7 +414,7 @@ a {
 /* ------------------------- */
 /* Form */
 /* ------------------------- */
-form,#form{
+form {
     font-size: 18px;
     display: flex;
     flex-direction: column;
@@ -436,10 +448,6 @@ form .submit input{
     font-family: 'Roboto', sans-serif;
 }
 
-
-
-
-
 /* ------------------------- */
 /* Remove input arrows
 /* ------------------------- */
@@ -448,6 +456,14 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+#map {
+    display: flex;
+}
+
+#map .map-container {
+    width: 100%;
 }
 
 

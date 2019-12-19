@@ -2,64 +2,240 @@
 /*                          Start of Index PAGE                             */
 /* ------------------------------------------------------------------------ */
 #what .items {
-    display: block;
+  display: block;
 }
 
 #what .items .item {
-    display: flex;
-    text-align: left;
-    flex: 1;
+  display: flex;
+  text-align: left;
+  flex: 1;
 }
 
 #what .items i {
-    margin-right: 1.3rem;
-    align-self: center;
+  margin-right: 1.3rem;
+  align-self: center;
 }
 
 /* Phones */
-@media(max-width: 620px) {
-    /* Home page */
-    #navbar {
-        flex-direction: column;
-        align-items: center;
-    }
+@media (max-width: 800px) {
+  /* Utilities */
+  .m-heading {
+    font-size: 1.7rem;
+    text-align: center;
+  }
 
-    #navbar .logo {
-        margin-bottom: 1rem;
-        text-align: center
-    }
+  .l-heading {
+    font-size: 2rem;
+    padding: 2rem 0 !important;
+  }
 
-    #who {
-        flex-direction: column;
-    }
+  .container {
+    padding: 0;
+  }
 
-    #who .who-img {
-        flex-basis: 300px;
-    }
+  .container-75-l,
+  .container-75-r {
+    max-width: 100%;
+    margin: auto;
+    padding: 0 0.5rem;
+  }
 
-    #clients .logo-container img {
-        width: 70%;
-    }
+  .list-g li {
+    list-style: none !important;
+  }
 
-    /* Services page */
-    #web-scraping {
-        flex-direction: column-reverse;
-    }
+  .pb-3 {
+    padding-bottom: 0.5rem !important;
+  }
 
-    #web-scraping .web-scraping-content {
-        padding: 0 !important;
-    }
+  .px-5 {
+    padding: 1rem !important;
+  }
 
-    #web-scraping .web-scraping-content .container-75-l {
-        
-    }
+  .rm-small {
+    display: none;
+  }
 
-    #web-scraping .web-scraping-img {
-        text-align: center;
-    }
+  .sm-px {
+    padding: 0 1rem !important;
+  }
 
-    #web-scraping .web-scraping-img img {
-        width: 80%;
-        height: 80%;
-    }
+  /* ------------------------------------------------------------------------ */
+  /*                          Start of Index PAGE                             */
+  /* ------------------------------------------------------------------------ */
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar .logo {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  #showcase {
+    height: 60vh;
+  }
+
+  #showcase .showcase-content h1,
+  #showcase-who .showcase-content h1 {
+    font-size: 2rem;
+  }
+
+  #who {
+    flex-direction: column;
+  }
+
+  #who .who-img {
+    flex-basis: 300px;
+  }
+
+  /* What we do */
+  #what .items {
+    padding: 0 1rem;
+  }
+
+  #what h3,
+  #what .items p {
+    text-align: center;
+  }
+
+  #what .items .item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Who */
+  #who .bg-dark h3 {
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+
+  /* Our clients */
+  #clients {
+    padding: 3rem 0 !important;
+  }
+
+  #clients .logo-container img {
+    width: 70%;
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /*                          Start of Services PAGE                          */
+  /* ------------------------------------------------------------------------ */
+  #title .pb-3 {
+    padding-bottom: 2rem !important;
+  }
+  #web-scraping {
+    flex-direction: column-reverse;
+  }
+
+  #web-scraping .web-scraping-content {
+    padding: 0 !important;
+    margin: auto;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  #web-scraping .web-scraping-img,
+  #projects .projects-img {
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+  }
+
+  #web-scraping .web-scraping-img img,
+  #projects .projects-img img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  #web-scraping .m-heading {
+    margin: 0 !important;
+  }
+
+  #projects {
+    flex-direction: column;
+  }
+
+  #projects .p-3 {
+    padding: 0 0.5rem !important;
+  }
+
+  #projects .container-75-r p {
+    text-align: center;
+  }
+
+  #projects ul {
+    text-align: center;
+  }
+
+  /* Videos */
+  #title .lead {
+    margin-bottom: 0;
+  }
+
+  #videos .container-flex {
+    flex-direction: column;
+    padding: 0 !important;
+    padding: 0 1rem;
+    margin: 0 1.5rem;
+    text-align: center;
+  }
+
+  #videos .pl-1,
+  #videos .pr-1 {
+    padding: 0 !important;
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /*                          Start of Who PAGE                               */
+  /* ------------------------------------------------------------------------ */
+  #showcase-who {
+    height: 75vh;
+  }
+  #showcase-who .lead {
+    font-size: 1rem;
+  }
+
+  #who-page {
+    flex-direction: column;
+  }
+
+  #who-page .team-img {
+    min-height: 200px;
+  }
+
+  #who-page div {
+      min-height: 0;
+  }
+
+  #who-page .mt-1 {
+      margin-top: 2rem !important;
+  }
+
+  #who-page .building-img {
+    min-height: 300px;
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /*                          Start of Contact PAGE                           */
+  /* ------------------------------------------------------------------------ */
+  #map {
+    flex-direction: column !important;
+  }
+
+  #map .p-1 {
+      padding: 0 !important;
+  }
+
+  #map .mt-3 {
+      margin-top: 1.5rem !important;
+  }
+
+  #form-container {
+      margin: 0 1rem !important;
+  }
 }
